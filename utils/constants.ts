@@ -414,13 +414,6 @@ export const menuList: MenuItem[] = [
         description: "Vanilla milkshake",
       },
       {
-        name: "Chocolate Milkshake",
-        nameFa: "شکلات",
-        price: 165000,
-        image: CoffeeIconLight,
-        description: "Chocolate milkshake",
-      },
-      {
         name: "Chocolate Glace",
         nameFa: "شکلات گلاسه",
         price: 165000,
