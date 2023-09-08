@@ -10,19 +10,14 @@ function MenuItem({ item }: MenuItemData) {
   return (
     <div
       style={{ direction: "rtl" }}
-      className="rounded-lg bg-primary p-2 flex"
+      className="rounded-lg bg-primary p-2 gap-2 flex flex-col items-center mb-2"
     >
-      <div className="h-20 w-20 ml-2">
-        <Image
-          src={item.image}
-          alt="Picture of the author"
-          width={100}
-          height={100}
-        />
+      <div className="ml-2 grow">
+        <Image src={item.image} alt="Picture of the author" />
       </div>
 
-      <div className="flex flex-col grow">
-        <div className="w-full text-sm mb-6">
+      <div className="flex flex-col grow w-full">
+        <div className="w-full text-base mb-6">
           <div className="flex justify-between w-full mb-2">
             <h3 className="font-bold">{item.nameFa}</h3>
             <h3
@@ -34,7 +29,7 @@ function MenuItem({ item }: MenuItemData) {
               {item.name}
             </h3>
           </div>
-          <p className="text-xs">{item.description}</p>
+          <p className="text-sm font-light">{item.description}</p>
         </div>
 
         <h4 className="text-left">{item.price} تومان</h4>

@@ -4,7 +4,7 @@ import MenuSection from "./MenuSection";
 
 function MenuContainer() {
   return (
-    <div className="bg-secondary rounded-lg text-black h-[70vh] overflow-y-auto mx-2">
+    <div className="bg-secondary rounded-2xl text-black h-[70vh] overflow-y-auto mx-2">
       {menuList.map((menu) => {
         return <MenuSection key={menu.category} menu={menu} />;
       })}

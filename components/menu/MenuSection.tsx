@@ -9,13 +9,13 @@ type MenuSectionData = {
 
 function MenuSection({ menu: { category, items } }: MenuSectionData) {
   return (
-    <div id={category} className="section flex flex-col gap-8 mx-2 ">
+    <div id={category} className="section flex flex-col gap-8 mx-4 ">
       <h2 className="text-2xl mt-2 font-bold text-center text-primary flex items-center justify-between gap-2">
-        <div>
+        <div className="w-1/5">
           <Divider />
         </div>
         {category}
-        <div className="rotate-180">
+        <div className="rotate-180 w-1/5">
           <Divider />
         </div>
       </h2>
