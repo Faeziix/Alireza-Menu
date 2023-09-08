@@ -4,12 +4,11 @@ import { MenuItem } from "@/utils/constants";
 import useHeadObserver from "@/hooks/useHeadObserver";
 
 type CategoryData = {
-  onClick: () => void;
   category: MenuItem;
   active: boolean;
 };
 
-function Category({ onClick, category, active }: CategoryData) {
+function Category({ category, active }: CategoryData) {
   const { changeActiveId } = useHeadObserver();
 
   return (
@@ -20,7 +19,7 @@ function Category({ onClick, category, active }: CategoryData) {
         } rounded-2xl grow min-w-[7rem] p-4 gap-1 flex flex-col border-primary border-2 justify-center items-center basis-full`}
         onClick={() => changeActiveId(category.category)}
       >
-        <div onClick={onClick} className="w-8 h-8 ">
+        <div className="w-8 h-8 ">
           <Image
             src={active ? category.images.dark : category.images.light}
             alt="Picture of the author"

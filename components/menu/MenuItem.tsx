@@ -1,4 +1,4 @@
-import { Item, MenuItem as MenuItemType } from "@/utils/constants";
+import { Item } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
 
