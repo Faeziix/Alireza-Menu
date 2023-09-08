@@ -8,8 +8,13 @@ function CategoryContainer() {
   const { activeId } = useHeadObserver();
 
   return (
-    <div className="relative mt-4">
-      <div className="flex my-4 items-center gap-2 max-w-[90vw] overflow-auto mx-auto">
+    <div className="relative">
+      <div
+        style={{
+          direction: "rtl",
+        }}
+        className="flex py-1 my-4 items-center gap-2 max-w-[90vw] overflow-auto mx-auto"
+      >
         {menuList.map((category, index) => (
           <Category
             key={category.category}

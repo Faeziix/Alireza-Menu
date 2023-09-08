@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { MenuItem } from "@/utils/constants";
 import useHeadObserver from "@/hooks/useHeadObserver";
@@ -9,10 +9,19 @@ type CategoryData = {
 };
 
 function Category({ category, active }: CategoryData) {
+  const categoryRef = useRef<HTMLDivElement>(null);
   const { changeActiveId } = useHeadObserver();
 
+  // useEffect(() => {
+  //   if (active) {
+  //     categoryRef.current?.scrollIntoView({
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // }, [active]);
+
   return (
-    <div className="flex">
+    <div className="flex" ref={categoryRef}>
       <button
         className={` ${
           active ? "bg-primary text-secondary" : "bg-transparent text-primary"
