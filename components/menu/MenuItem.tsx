@@ -10,7 +10,7 @@ function MenuItem({ item }: MenuItemData) {
   return (
     <div
       style={{ direction: "rtl" }}
-      className="mx-2 rounded-lg bg-primary p-2 flex"
+      className="rounded-lg bg-primary p-2 flex"
     >
       <div className="h-20 w-20 ml-2">
         <Image
@@ -20,8 +20,9 @@ function MenuItem({ item }: MenuItemData) {
           height={100}
         />
       </div>
+
       <div className="flex flex-col grow">
-        <div className="w-full text-sm">
+        <div className="w-full text-sm mb-6">
           <div className="flex justify-between w-full mb-2">
             <h3 className="font-bold">{item.nameFa}</h3>
             <h3

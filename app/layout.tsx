@@ -1,5 +1,12 @@
 import "./globals.scss";
 import type { Metadata } from "next";
+import { Vazirmatn } from "next/font/google";
+
+const vazirmatn = Vazirmatn({
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["arabic"],
+});
 
 export const metadata: Metadata = {
   title: "Alireza Menu",
@@ -12,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="fa" className={vazirmatn.className}>
       <body className="bg-background">{children}</body>
     </html>
   );

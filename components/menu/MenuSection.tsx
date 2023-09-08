@@ -1,6 +1,7 @@
 import { MenuItem as MenuItemType } from "@/utils/constants";
 import React from "react";
 import MenuItem from "./MenuItem";
+import Divider from "../Divider";
 
 type MenuSectionData = {
   menu: MenuItemType;
@@ -8,9 +9,15 @@ type MenuSectionData = {
 
 function MenuSection({ menu: { category, items } }: MenuSectionData) {
   return (
-    <div id={category} className="section flex flex-col gap-4">
-      <h2 className="text-2xl font-bold text-center text-primary divider-line">
+    <div id={category} className="section flex flex-col gap-8 mx-2 ">
+      <h2 className="text-2xl mt-2 font-bold text-center text-primary flex items-center justify-between gap-2">
+        <div>
+          <Divider />
+        </div>
         {category}
+        <div className="rotate-180">
+          <Divider />
+        </div>
       </h2>
       <div className="flex flex-col gap-4 mb-6">
         {items.map((item) => {

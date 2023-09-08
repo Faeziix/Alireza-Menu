@@ -9,14 +9,18 @@ html {
 
 .divider-line {
   position: relative;
+  width: 100%;
+  height: 2px;
+  background: theme("colors.primary");
 
-  &:before,
-  &:after {
+  &:before {
     content: "";
-    display: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: theme("colors.primary");
-    margin: 1rem 0;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    top: -4px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #e5e5e5;
   }
 }
