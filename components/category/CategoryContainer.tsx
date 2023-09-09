@@ -5,7 +5,7 @@ import { menuList } from "@/utils/constants";
 import useHeadObserver from "@/hooks/useHeadObserver";
 
 function CategoryContainer() {
-  const { activeId } = useHeadObserver();
+  const { activeId, changeActiveId } = useHeadObserver();
 
   return (
     <div className="relative">
@@ -20,6 +20,7 @@ function CategoryContainer() {
             key={category.category}
             category={category}
             active={activeId === category.category}
+            changeActiveId={changeActiveId}
           />
         ))}
       </div>
