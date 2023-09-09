@@ -25,6 +25,7 @@ function Category({ category, active, changeActiveId }: CategoryData) {
             src={active ? category.images.dark : category.images.light}
             alt="Picture of the author"
             className="w-12 h-12"
+            priority
           />
         </div>
         <p className="text-center whitespace-nowrap">{category.category}</p>
