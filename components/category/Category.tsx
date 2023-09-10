@@ -22,8 +22,15 @@ function Category({ category, active, changeActiveId }: CategoryData) {
       >
         <div className="">
           <Image
-            src={active ? category.images.dark : category.images.light}
+            src={category.images.dark}
             alt="Picture of the author"
+            className={active ? "block" : "hidden"}
+            priority
+          />
+          <Image
+            src={category.images.light}
+            alt="Picture of the author"
+            className={active ? "hidden" : "block"}
             priority
           />
         </div>
