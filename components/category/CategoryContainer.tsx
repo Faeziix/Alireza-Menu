@@ -13,7 +13,7 @@ function CategoryContainer() {
         style={{
           direction: "rtl",
         }}
-        className="flex py-1 my-4 items-center gap-2 max-w-[90vw] overflow-auto mx-auto"
+        className="flex py-1 my-3 items-center gap-2 max-w-[90vw] overflow-auto mx-auto"
       >
         {menuList.map((category, index) => (
           <Category

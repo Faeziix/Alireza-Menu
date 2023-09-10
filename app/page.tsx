@@ -6,7 +6,7 @@ import useHeadObserver from "@/hooks/useHeadObserver";
 export default function Home() {
   return (
     <main className="">
-      <h1 className="text-4xl text-active py-8 text-center font-bold">
+      <h1 className="text-4xl text-active pt-8 pb-4 text-center font-bold">
         منوی کافی‌شاپ
       </h1>
 

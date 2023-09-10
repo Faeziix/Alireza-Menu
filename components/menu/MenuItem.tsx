@@ -10,7 +10,7 @@ function MenuItem({ item }: MenuItemData) {
   return (
     <div
       style={{ direction: "rtl" }}
-      className="rounded-xl bg-primary p-2 gap-2 flex flex-col items-center mb-2"
+      className="rounded-xl bg-primary p-2 gap-2 flex flex-col items-center "
     >
       <div className="grow">
         <Image
