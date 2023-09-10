@@ -20,9 +20,9 @@ function useHeadObserver() {
         if (entry.isIntersecting) {
           setActiveId(entry.target.id);
           const btn = document.getElementById("btn-" + entry.target.id);
-          if (btn) {
-            btn.scrollIntoView({ inline: "nearest", behavior: "auto" });
-          }
+          // if (btn) {
+          //   btn.scrollIntoView({ inline: "nearest", behavior: "auto" });
+          // }
         }
       });
     };

@@ -9,7 +9,17 @@ type CategoryData = {
 };
 
 function Category({ category, active, changeActiveId }: CategoryData) {
-  const categoryRef = useRef<HTMLDivElement>(null);
+  const categoryRef = useRef<HTMLDivElement>();
+
+  useEffect(() => {
+    console.log("active", active);
+    if (active) {
+      console.log(categoryRef.current?.offsetLeft);
+      categoryRef.current?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, [active]);
 
   return (
     <div ref={categoryRef} className="flex">
