@@ -20,7 +20,7 @@ import SnacksIconLight from "@/public/icons/Snacks/Light.png";
 import TeaIconLight from "@/public/icons/Tea/Light.png";
 import MocktailIconLight from "@/public/icons/Mocktail/Light.png";
 
-import CoffeeImg from "@/public/coffee-image.png";
+import CoffeeImg from "@/public/cup-coffee.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -62,7 +62,7 @@ export const menuList: MenuItem[] = [
     items: [
       {
         name: "Double Espresso",
-        nameFa: "دوبل اسپرسو",
+        nameFa: "دبل اسپرسو",
         description: "Double shot of espresso",
         price: 165000,
         image: CoffeeImg,
@@ -71,7 +71,7 @@ export const menuList: MenuItem[] = [
         name: "Single Espresso",
         nameFa: "اسپرسو",
         description: "Single shot of espresso",
-        price: 2.5,
+        price: 165000,
         image: CoffeeImg,
       },
       {
@@ -168,22 +168,22 @@ export const menuList: MenuItem[] = [
         image: CoffeeImg,
       },
       {
-        name: "Iced Latte",
-        nameFa: "لاته یخی",
+        name: "Ice Latte",
+        nameFa: "آیس لاته",
         description: "Espresso with ice cream",
         price: 165000,
         image: CoffeeImg,
       },
       {
-        name: "Iced Mocha ",
-        nameFa: "موکا یخی",
+        name: "Ice Mocha ",
+        nameFa: "آیس موکا",
         description: "Espresso with ice cream",
         price: 165000,
         image: CoffeeImg,
       },
       {
-        name: "Iced Caramel Macchiato",
-        nameFa: "کارامل ماکیاتو یخی",
+        name: "Ice Caramel Macchiato",
+        nameFa: "آیس کارامل ماکیاتو",
         description: "Espresso with ice cream",
         price: 165000,
         image: CoffeeImg,

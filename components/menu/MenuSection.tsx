@@ -9,8 +9,8 @@ type MenuSectionData = {
 
 function MenuSection({ menu: { category, items } }: MenuSectionData) {
   return (
-    <div id={category} className="section flex flex-col gap-8 mx-4 ">
-      <h2 className="text-2xl mt-2 font-bold text-center text-primary flex items-center justify-between gap-2">
+    <div id={category} className="section flex flex-col gap-4 mx-4">
+      <h2 className="text-2xl font-bold text-center text-primary flex items-center justify-between gap-2">
         <div className="w-1/5">
           <Divider />
         </div>
@@ -19,7 +19,7 @@ function MenuSection({ menu: { category, items } }: MenuSectionData) {
           <Divider />
         </div>
       </h2>
-      <div className="flex flex-col gap-4 mb-6">
+      <div className="flex flex-col gap-1 mb-4">
         {items.map((item) => {
           return <MenuItem key={item.name} item={item} />;
         })}
