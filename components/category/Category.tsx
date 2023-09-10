@@ -12,9 +12,7 @@ function Category({ category, active, changeActiveId }: CategoryData) {
   const categoryRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
-    console.log("active", active);
     if (active) {
-      console.log(categoryRef.current?.offsetLeft);
       categoryRef.current?.scrollIntoView({
         behavior: "smooth",
       });

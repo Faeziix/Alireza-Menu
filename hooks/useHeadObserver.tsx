@@ -1,28 +1,29 @@
-import { useEffect, useRef, useState, useTransition } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function useHeadObserver() {
   const observer = useRef<IntersectionObserver>();
   const [activeId, setActiveId] = useState("اسپرسوبار");
-  const [isPending, startTransition] = useTransition();
+  const [shouldUpdateActive, setShouldUpdateActive] = useState(true);
 
   function changeActiveId(id: string) {
     setActiveId(id);
 
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView();
+      setShouldUpdateActive(false);
+      element.scrollIntoView({ behavior: "smooth" });
     }
+
+    setTimeout(() => {
+      setShouldUpdateActive(true);
+    }, 1000);
   }
 
   useEffect(() => {
     const handleObsever = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && shouldUpdateActive) {
           setActiveId(entry.target.id);
-          const btn = document.getElementById("btn-" + entry.target.id);
-          // if (btn) {
-          //   btn.scrollIntoView({ inline: "nearest", behavior: "auto" });
-          // }
         }
       });
     };
@@ -36,9 +37,9 @@ function useHeadObserver() {
     });
 
     return () => observer.current?.disconnect();
-  }, []);
+  }, [shouldUpdateActive]);
 
-  return { activeId, changeActiveId };
+  return { activeId, changeActiveId, setShouldUpdateActive };
 }
 
 export default useHeadObserver;
